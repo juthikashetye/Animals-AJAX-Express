@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inserting Animals</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+  </head>
+  <body>
+
+  	<!-- Make a form that submits via ajax that hits a route that inserts an animal. 
+      Show all the animals on the index.html page.
+      Make another form that submits without ajax to insert an animal. -->
+
+    <h1>Animals</h1>
+
+    <h2>Insert animal via Form</h2>
+    
+    <form action="/animals-insert" method="POST">
+      <input type="text" name="animal_name" placeholder="give an animal name">
+      <button>insert the animal</button>
+    </form>
+
+    <h2>Insert animal via AJAX</h2>
+
+    <form action="/animals-insert" method="POST">
+      <input type="text" name="animal_name" placeholder="give an animal a name">
+      <button>insert the animal</button>
+    </form>
+
+    <div></div>
+    
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/assets/js/app.js"></script>
+    <script type="text/javascript">
+      getAnimals();
+    </script>
+  </body>
+</html>
