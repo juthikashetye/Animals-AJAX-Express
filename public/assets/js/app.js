@@ -1,6 +1,7 @@
-$('#insert_animal').submit(function(e) {
 
-  e.preventDefault(); // avoid to execute the actual submit of the form.
+
+ function insertAnimal(){
+
   var cn = $("#insert_animal input[name='animal_name']").val();
 
   $.ajax({
@@ -11,9 +12,10 @@ $('#insert_animal').submit(function(e) {
     }
   }).then(function(message) {
     getAnimals();
+    $('#insert_animal input').val('')
   });
+}
 
-});
 
 function getAnimals() {
   $('div').empty();
